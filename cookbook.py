@@ -13,3 +13,18 @@ with open('files/book1.txt', "r", encoding='utf-8') as file:
          cook_book[string.strip()] = menu_list# Склеиваем в словарь название меню и состав
       print('cook_book = ')
       pprint(cook_book, sort_dicts=None)
+# Задача №2
+def get_shop_list_by_dishes(dishes, person_count):
+  zakaz = []
+  final = []
+  for i in dishes:
+    zakaz += cook_book[i]
+  for i in zakaz:
+    string1 = i['ingridient_name']
+    string2 = i['measure']
+    string3 = i['quantity'] * person_count
+    final.append({string1 :{'measure': string2, 'quantity':string3}})
+    #pprint(final)
+  return pprint(final)
+
+get_shop_list_by_dishes(['Запеченный картофель', 'Омлет'], 2)
