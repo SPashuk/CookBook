@@ -32,7 +32,7 @@ def get_shop_list_by_dishes(dishes, person_count):
   # pprint(zakaz)
   # print('**************************')
   for i in zakaz:
-    j = 0
+    j = 1
     if i['ingridient_name'] not in final.keys():
       final.update({
         i['ingridient_name']: {
@@ -51,9 +51,6 @@ def get_shop_list_by_dishes(dishes, person_count):
         }
       })
   #print(ing_var,'\n', ing_var.keys(),'\n', ing_var.values())
-  #final_sort = sorted(final.items())
-  #final_sort=sorted(final.values())
   return pprint(final)
-  #return pprint(final_sort)
 
-get_shop_list_by_dishes(['Запеченный картофель', 'Омлет'],2)  #Запеченный картофель Фахитос Утка по-пекински
+get_shop_list_by_dishes(['Запеченный картофель', 'Омлет'], 2)  #Запеченный картофель Фахитос Утка по-пекински
