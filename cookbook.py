@@ -1,6 +1,5 @@
 # Задача №1 лекция «Открытие и чтение файла, запись в файл»
 from pprint import pprint
-
 cook_book = {}
 with open('files/book1.txt', "r", encoding='utf-8') as file:
   for string in file:
