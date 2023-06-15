@@ -1,5 +1,6 @@
 # Задача №1 лекция «Открытие и чтение файла, запись в файл»
 from pprint import pprint
+
 cook_book = {}
 with open('files/book1.txt', "r", encoding='utf-8') as file:
   for string in file:
@@ -21,7 +22,7 @@ with open('files/book1.txt', "r", encoding='utf-8') as file:
   
 
 # Задача №2
-print('\n\n\************************ Задача №2 **************************')
+print('************************ Задача №2 **************************')
 def get_shop_list_by_dishes(dishes, person_count):
   zakaz = []
   final = {}
